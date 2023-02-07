@@ -6,4 +6,6 @@ RUN set -eux \
     && sudo sh -c 'echo "deb https://hub.unity3d.com/linux/repos/deb stable main" > /etc/apt/sources.list.d/unityhub.list' \
     && wget -qO - https://hub.unity3d.com/linux/keys/public | sudo apt-key add - \
     && apt update \
-    && apt install -y unityhub
+    && apt install -y unityhub \
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/*
