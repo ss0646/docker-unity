@@ -1,0 +1,6 @@
+services:
+  unity-hub:
+    build: 
+      context: .
+      dockerfile: docker/Dockerfile
+    container_name: unity-hub
